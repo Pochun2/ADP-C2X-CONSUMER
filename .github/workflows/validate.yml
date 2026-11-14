@@ -1,0 +1,23 @@
+name: validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run offline consumer bootstrap tests
+        run: python -B -m unittest discover -s tests -v
+      - name: Test count guard
+        run: python -B -c "import unittest; n=unittest.defaultTestLoader.discover('tests').countTestCases(); print('TEST_COUNT='+str(n)); assert n==2"
