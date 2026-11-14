@@ -1,0 +1,13 @@
+{
+  "account_order": false,
+  "core_main_sha_pin": "3cdaf8dbd760a9b14c5cd27154b0775e155869c5",
+  "core_repository": "Pochun2/ADP-GITHUB-CORE",
+  "core_reuse": "PROPOSED_NOT_PROVEN",
+  "core_source_modifications": "ZERO_NOT_EXECUTED",
+  "executor_enabled": false,
+  "owner_model_grant": "NOT_ISSUED",
+  "scheduler_enabled": false,
+  "schema": "adp-c2x-second-consumer-core-pin-v1",
+  "trading": false,
+  "trusted_issuer": "NOT_DEPLOYED"
+}
